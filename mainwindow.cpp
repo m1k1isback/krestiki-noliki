@@ -24,6 +24,20 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->btn_2_2, SIGNAL(clicked()), this, SLOT(onButtonClicked()));
 
     connect(ui->btnExit, SIGNAL(clicked()), this, SLOT(close()));
+
+    ui->btn_0_1->setStyleSheet(
+        "QPushButton {"
+        "    background-color: white;"
+        "   font-size: 48px;"
+        "    border-left: 3px solid black;"
+        "    border-right: 3px solid black;"
+        "    margin: 0px;"
+        "    border-top: none;"
+        "    border-bottom: 2px solid black;"
+        "    min-width: 100px;"
+        "    min-height: 100px;"
+        "}"
+        );
 }
 
 MainWindow::~MainWindow()
@@ -44,7 +58,7 @@ void MainWindow::onButtonClicked(){
     if(!StateGame || !FieldState[row][col].isEmpty()){
         return;
     } else {
-        button->setText(CurrentPlayer);
+        animateButton(button, CurrentPlayer);
         FieldState[row][col] = CurrentPlayer;
     }
 
@@ -247,4 +261,11 @@ void MainWindow::animateButton(QPushButton *button, const QString &text) {
 
     // 5. Запускаем анимацию
     animation->start(QAbstractAnimation::DeleteWhenStopped);
+
+    // Анимация увеличения
+    QPropertyAnimation *scaleAnim = new QPropertyAnimation(button, "minimumSize");
+    scaleAnim->setDuration(300);
+    scaleAnim->setStartValue(QSize(80, 80));   // Начинаем с 80x80
+    scaleAnim->setEndValue(QSize(100, 100));   // Заканчиваем на 100x100
+    scaleAnim->start(QAbstractAnimation::DeleteWhenStopped);
 }
