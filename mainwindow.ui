@@ -6,12 +6,16 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>374</width>
-    <height>447</height>
+    <width>457</width>
+    <height>363</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Крестики-нолики</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/img/img/icon.png</normaloff>:/img/img/icon.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">QMainWindow {
@@ -23,7 +27,7 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>40</y>
+      <y>35</y>
       <width>106</width>
       <height>106</height>
      </rect>
@@ -36,18 +40,28 @@
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-    background-color: white;
+    background-color: transparent;
+    border: none;
     color: black;
     font-size: 48px;
     font-weight: bold;
     min-width: 100px;
-    min-height: 100px;    
-	margin: 0px;
-    padding: 0px;
+    min-height: 100px;
 }
-QPushButton:hover { background-color: #e0e0e0; }
-QPushButton[text=&quot;X&quot;] { color: #0066cc; }
-QPushButton[text=&quot;O&quot;] { color: #ff0000; }</string>
+
+QPushButton:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* КРЕСТИК - СИНИЙ */
+QPushButton[text=&quot;X&quot;] {
+    color: #0066ff;
+}
+
+/* НОЛИК - КРАСНЫЙ */
+QPushButton[text=&quot;O&quot;] {
+    color: #ff0000;
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -56,8 +70,8 @@ QPushButton[text=&quot;O&quot;] { color: #ff0000; }</string>
    <widget class="QPushButton" name="btn_0_1">
     <property name="geometry">
      <rect>
-      <x>102</x>
-      <y>40</y>
+      <x>104</x>
+      <y>35</y>
       <width>106</width>
       <height>106</height>
      </rect>
@@ -70,24 +84,28 @@ QPushButton[text=&quot;O&quot;] { color: #ff0000; }</string>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-    background-color: white;
+    background-color: transparent;
+    border: none;
     color: black;
     font-size: 48px;
     font-weight: bold;
     min-width: 100px;
     min-height: 100px;
-    margin: 0px;
 }
 
-QPushButton::left-border {
-    border-left: 2px solid black;
+QPushButton:hover {
+    background-color: rgba(0, 0, 0, 0.05);
 }
-QPushButton::right-border {
-    border-right: 2px solid black;
+
+/* КРЕСТИК - СИНИЙ */
+QPushButton[text=&quot;X&quot;] {
+    color: #0066ff;
 }
-QPushButton:hover { background-color: #e0e0e0; }
-QPushButton[text=&quot;X&quot;] { color: #0066cc; }
-QPushButton[text=&quot;O&quot;] { color: #ff0000; }</string>
+
+/* НОЛИК - КРАСНЫЙ */
+QPushButton[text=&quot;O&quot;] {
+    color: #ff0000;
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -96,8 +114,8 @@ QPushButton[text=&quot;O&quot;] { color: #ff0000; }</string>
    <widget class="QPushButton" name="btn_1_1">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>140</y>
+      <x>104</x>
+      <y>139</y>
       <width>106</width>
       <height>106</height>
      </rect>
@@ -110,18 +128,28 @@ QPushButton[text=&quot;O&quot;] { color: #ff0000; }</string>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-    background-color: white;
+    background-color: transparent;
+    border: none;
     color: black;
     font-size: 48px;
     font-weight: bold;
-    border: 3px solid black;
     min-width: 100px;
     min-height: 100px;
-    margin: 0px;
 }
-QPushButton:hover { background-color: #e0e0e0; }
-QPushButton[text=&quot;X&quot;] { color: #0066cc; }
-QPushButton[text=&quot;O&quot;] { color: #ff0000; }</string>
+
+QPushButton:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* КРЕСТИК - СИНИЙ */
+QPushButton[text=&quot;X&quot;] {
+    color: #0066ff;
+}
+
+/* НОЛИК - КРАСНЫЙ */
+QPushButton[text=&quot;O&quot;] {
+    color: #ff0000;
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -131,7 +159,7 @@ QPushButton[text=&quot;O&quot;] { color: #ff0000; }</string>
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>140</y>
+      <y>139</y>
       <width>106</width>
       <height>106</height>
      </rect>
@@ -144,20 +172,28 @@ QPushButton[text=&quot;O&quot;] { color: #ff0000; }</string>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-    background-color: white;
+    background-color: transparent;
+    border: none;
     color: black;
     font-size: 48px;
     font-weight: bold;
-    border-right: 3px solid black;
-    border-top: 3px solid black;
-    border-bottom: 3px solid black;
     min-width: 100px;
     min-height: 100px;
-    margin: 0px;
 }
-QPushButton:hover { background-color: #e0e0e0; }
-QPushButton[text=&quot;X&quot;] { color: #0066cc; }
-QPushButton[text=&quot;O&quot;] { color: #ff0000; }</string>
+
+QPushButton:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* КРЕСТИК - СИНИЙ */
+QPushButton[text=&quot;X&quot;] {
+    color: #0066ff;
+}
+
+/* НОЛИК - КРАСНЫЙ */
+QPushButton[text=&quot;O&quot;] {
+    color: #ff0000;
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -166,8 +202,8 @@ QPushButton[text=&quot;O&quot;] { color: #ff0000; }</string>
    <widget class="QPushButton" name="btn_0_2">
     <property name="geometry">
      <rect>
-      <x>204</x>
-      <y>40</y>
+      <x>208</x>
+      <y>35</y>
       <width>106</width>
       <height>106</height>
      </rect>
@@ -180,17 +216,28 @@ QPushButton[text=&quot;O&quot;] { color: #ff0000; }</string>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-    background-color: white;
+    background-color: transparent;
+    border: none;
     color: black;
     font-size: 48px;
     font-weight: bold;
     min-width: 100px;
     min-height: 100px;
-    margin: 0px;
 }
-QPushButton:hover { background-color: #e0e0e0; }
-QPushButton[text=&quot;X&quot;] { color: #0066cc; }
-QPushButton[text=&quot;O&quot;] { color: #ff0000; }</string>
+
+QPushButton:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* КРЕСТИК - СИНИЙ */
+QPushButton[text=&quot;X&quot;] {
+    color: #0066ff;
+}
+
+/* НОЛИК - КРАСНЫЙ */
+QPushButton[text=&quot;O&quot;] {
+    color: #ff0000;
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -199,8 +246,8 @@ QPushButton[text=&quot;O&quot;] { color: #ff0000; }</string>
    <widget class="QPushButton" name="btn_1_2">
     <property name="geometry">
      <rect>
-      <x>203</x>
-      <y>140</y>
+      <x>208</x>
+      <y>139</y>
       <width>106</width>
       <height>106</height>
      </rect>
@@ -213,20 +260,28 @@ QPushButton[text=&quot;O&quot;] { color: #ff0000; }</string>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-    background-color: white;
+    background-color: transparent;
+    border: none;
     color: black;
     font-size: 48px;
     font-weight: bold;
-    border-left: 3px solid black;
-    border-top: 3px solid black;
-    border-bottom: 3px solid black;
     min-width: 100px;
     min-height: 100px;
-    margin: 0px;
 }
-QPushButton:hover { background-color: #e0e0e0; }
-QPushButton[text=&quot;X&quot;] { color: #0066cc; }
-QPushButton[text=&quot;O&quot;] { color: #ff0000; }</string>
+
+QPushButton:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* КРЕСТИК - СИНИЙ */
+QPushButton[text=&quot;X&quot;] {
+    color: #0066ff;
+}
+
+/* НОЛИК - КРАСНЫЙ */
+QPushButton[text=&quot;O&quot;] {
+    color: #ff0000;
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -235,7 +290,7 @@ QPushButton[text=&quot;O&quot;] { color: #ff0000; }</string>
    <widget class="QPushButton" name="btn_2_2">
     <property name="geometry">
      <rect>
-      <x>202</x>
+      <x>208</x>
       <y>243</y>
       <width>106</width>
       <height>106</height>
@@ -249,19 +304,28 @@ QPushButton[text=&quot;O&quot;] { color: #ff0000; }</string>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-    background-color: white;
+    background-color: transparent;
+    border: none;
     color: black;
     font-size: 48px;
     font-weight: bold;
-    border-left: 3px solid black;
-    border-top: 3px solid black;
     min-width: 100px;
     min-height: 100px;
-    margin: 0px;
 }
-QPushButton:hover { background-color: #e0e0e0; }
-QPushButton[text=&quot;X&quot;] { color: #0066cc; }
-QPushButton[text=&quot;O&quot;] { color: #ff0000; }</string>
+
+QPushButton:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* КРЕСТИК - СИНИЙ */
+QPushButton[text=&quot;X&quot;] {
+    color: #0066ff;
+}
+
+/* НОЛИК - КРАСНЫЙ */
+QPushButton[text=&quot;O&quot;] {
+    color: #ff0000;
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -270,7 +334,7 @@ QPushButton[text=&quot;O&quot;] { color: #ff0000; }</string>
    <widget class="QPushButton" name="btn_2_1">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>104</x>
       <y>243</y>
       <width>106</width>
       <height>106</height>
@@ -284,20 +348,28 @@ QPushButton[text=&quot;O&quot;] { color: #ff0000; }</string>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-    background-color: white;
+    background-color: transparent;
+    border: none;
     color: black;
     font-size: 48px;
     font-weight: bold;
-    border-left: 3px solid black;
-    border-right: 3px solid black;
-    border-top: 3px solid black;
     min-width: 100px;
     min-height: 100px;
-    margin: 0px;
 }
-QPushButton:hover { background-color: #e0e0e0; }
-QPushButton[text=&quot;X&quot;] { color: #0066cc; }
-QPushButton[text=&quot;O&quot;] { color: #ff0000; }</string>
+
+QPushButton:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* КРЕСТИК - СИНИЙ */
+QPushButton[text=&quot;X&quot;] {
+    color: #0066ff;
+}
+
+/* НОЛИК - КРАСНЫЙ */
+QPushButton[text=&quot;O&quot;] {
+    color: #ff0000;
+}</string>
     </property>
     <property name="text">
      <string/>
@@ -320,72 +392,40 @@ QPushButton[text=&quot;O&quot;] { color: #ff0000; }</string>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
-    background-color: white;
+    background-color: transparent;
+    border: none;
     color: black;
     font-size: 48px;
     font-weight: bold;
-    border-right: 3px solid black;
-    border-top: 3px solid black;
     min-width: 100px;
     min-height: 100px;
-    margin: 0px;
 }
-QPushButton:hover { background-color: #e0e0e0; }
-QPushButton[text=&quot;X&quot;] { color: #0066cc; }
-QPushButton[text=&quot;O&quot;] { color: #ff0000; }</string>
+
+QPushButton:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* КРЕСТИК - СИНИЙ */
+QPushButton[text=&quot;X&quot;] {
+    color: #0066ff;
+}
+
+/* НОЛИК - КРАСНЫЙ */
+QPushButton[text=&quot;O&quot;] {
+    color: #ff0000;
+}</string>
     </property>
     <property name="text">
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="btnReset">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>360</y>
-      <width>101</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Новая игра</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnReset_2">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>360</y>
-      <width>101</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Сбросить 
-счётчик</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnExit">
-    <property name="geometry">
-     <rect>
-      <x>200</x>
-      <y>360</y>
-      <width>101</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Выйти из 
-игры</string>
-    </property>
-   </widget>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>310</x>
+      <x>320</x>
       <y>40</y>
-      <width>48</width>
-      <height>69</height>
+      <width>107</width>
+      <height>123</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -393,8 +433,20 @@ QPushButton[text=&quot;O&quot;] { color: #ff0000; }</string>
       <widget class="QLabel" name="labelXWins">
        <property name="font">
         <font>
-         <pointsize>13</pointsize>
+         <pointsize>-1</pointsize>
+         <bold>true</bold>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel#labelXWins {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #4facfe, stop:1 #00f2fe);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}</string>
        </property>
        <property name="text">
         <string>X : 0</string>
@@ -405,11 +457,206 @@ QPushButton[text=&quot;O&quot;] { color: #ff0000; }</string>
       <widget class="QLabel" name="labelOWins">
        <property name="font">
         <font>
-         <pointsize>13</pointsize>
+         <pointsize>-1</pointsize>
+         <bold>true</bold>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel#labelOWins {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #f093fb, stop:1 #f5576c);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}</string>
        </property>
        <property name="text">
         <string>O : 0</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>241</y>
+      <width>311</width>
+      <height>4</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame {
+    background-color: #4a3728;  /* Тёмное дерево */
+    border-radius: 2px;
+}</string>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Orientation::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>138</y>
+      <width>311</width>
+      <height>4</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame {
+    background-color: #4a3728;  /* Тёмное дерево */
+    border-radius: 2px;
+}</string>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Orientation::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_3">
+    <property name="geometry">
+     <rect>
+      <x>103</x>
+      <y>34</y>
+      <width>4</width>
+      <height>314</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame {
+    background-color: #4a3728;  /* Тёмное дерево */
+    border-radius: 2px;
+}</string>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Orientation::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_4">
+    <property name="geometry">
+     <rect>
+      <x>207</x>
+      <y>36</y>
+      <width>4</width>
+      <height>314</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame {
+    background-color: #4a3728;  /* Тёмное дерево */
+    border-radius: 2px;
+}</string>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Orientation::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>170</y>
+      <width>132</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QPushButton" name="btnReset">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #667eea, stop:1 #764ba2);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    padding: 6px 12px;
+    min-width: 80px;
+    min-height: 30px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #764ba2, stop:1 #667eea);
+}
+
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #5a67d8, stop:1 #6b46c1);
+}</string>
+       </property>
+       <property name="text">
+        <string>Новая игра</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnReset_2">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #f093fb, stop:1 #f5576c);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    padding: 6px 15px;
+    min-width: 100px;
+    min-height: 30px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #f5576c, stop:1 #f093fb);
+}
+
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #d63384, stop:1 #c2185b);
+}</string>
+       </property>
+       <property name="text">
+        <string>Сбросить 
+счётчик</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnExit">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #fa709a, stop:1 #fee140);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    padding: 6px 15px;
+    min-width: 100px;
+    min-height: 30px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #fee140, stop:1 #fa709a);
+}
+
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #f5576c, stop:1 #f093fb);
+}</string>
+       </property>
+       <property name="text">
+        <string>Выйти из 
+игры</string>
        </property>
       </widget>
      </item>
@@ -428,8 +675,14 @@ QPushButton[text=&quot;O&quot;] { color: #ff0000; }</string>
    <zorder>btnReset_2</zorder>
    <zorder>btnExit</zorder>
    <zorder>layoutWidget</zorder>
+   <zorder>line</zorder>
+   <zorder>line_2</zorder>
+   <zorder>line_3</zorder>
+   <zorder>line_4</zorder>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

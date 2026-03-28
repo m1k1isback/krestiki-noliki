@@ -25,19 +25,17 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(ui->btnExit, SIGNAL(clicked()), this, SLOT(close()));
 
-    ui->btn_0_1->setStyleSheet(
-        "QPushButton {"
-        "    background-color: white;"
-        "   font-size: 48px;"
-        "    border-left: 3px solid black;"
-        "    border-right: 3px solid black;"
-        "    margin: 0px;"
-        "    border-top: none;"
-        "    border-bottom: 2px solid black;"
-        "    min-width: 100px;"
-        "    min-height: 100px;"
+    // Устанавливаем фон-полянку
+    setStyleSheet(
+        "QMainWindow {"
+        "    background-image: url(:/img/img/polyana.jpg);"
+        "    background-position: center;"
+        "    background-repeat: no-repeat;"
+        "    background-size: cover;"
         "}"
         );
+
+    //setWindowFlags(Qt::FramelessWindowHint);
 }
 
 MainWindow::~MainWindow()
@@ -69,10 +67,31 @@ void MainWindow::onButtonClicked(){
     }
 
     checkWinner();
+
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            QString btnName = "btn_" + QString::number(i) + "_" + QString::number(j);
+            QPushButton *btn = findChild<QPushButton*>(btnName);
+
+            if (btn && btn->text() == "X") {
+                btn->setStyleSheet(
+                    "QPushButton { background-color: transparent; border: none; "
+                    "color: #0066ff; font-size: 56px; font-weight: bold; }"
+                    );
+            } else if (btn && btn->text() == "O") {
+                btn->setStyleSheet(
+                    "QPushButton { background-color: transparent; border: none; "
+                    "color: #ff0000; font-size: 56px; font-weight: bold; }"
+                    );
+            }
+        }
+    }
 }
 
 
 void MainWindow::checkWinner(){
+
+    // строка 1
     if(FieldState[0][0] != "" && FieldState[0][0] == FieldState[0][1] && FieldState[0][1] == FieldState[0][2]){
         StateGame = false;
         if(FieldState[0][0] == "X"){
@@ -86,6 +105,7 @@ void MainWindow::checkWinner(){
         QMessageBox::information(this, "🎉 Победа!", "Игрок " + FieldState[0][0] + " выиграл!");
     }
 
+    // строка 2
     if(FieldState[1][0] != "" && FieldState[1][0] == FieldState[1][1] && FieldState[1][1] == FieldState[1][2]){
         StateGame = false;
         if(FieldState[1][0] == "X"){
@@ -99,6 +119,7 @@ void MainWindow::checkWinner(){
         QMessageBox::information(this, "🎉 Победа!", "Игрок " + FieldState[1][0] + " выиграл!");
     }
 
+    // строка 3
     if(FieldState[2][0] != "" && FieldState[2][0] == FieldState[2][1] && FieldState[2][1] == FieldState[2][2]){
         StateGame = false;
         if(FieldState[2][0] == "X"){

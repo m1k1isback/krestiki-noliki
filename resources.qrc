@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>img/polyana.jpg</file>
+        <file>img/icon.png</file>
+    </qresource>
+</RCC>
